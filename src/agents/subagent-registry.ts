@@ -210,7 +210,6 @@ function startSubagentAnnounceCleanupFlow(runId: string, entry: SubagentRunRecor
     label: entry.label,
     outcome: entry.outcome,
     spawnMode: entry.spawnMode,
-    expectsCompletionMessage: entry.expectsCompletionMessage,
   }).then((didAnnounce) => {
     void finalizeSubagentCleanup(runId, entry.cleanup, didAnnounce);
   });
